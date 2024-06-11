@@ -1,0 +1,200 @@
+@font-face {
+  font-family: "Reddit Mono";
+  src: url(../fonts/Reddit_Mono/static/RedditMono-Medium.ttf);
+}
+
+:root {
+  --fondo-nav: #b80c09;
+  --titulos: #04a777;
+  --destacado: #ED254E;
+}
+
+* {
+  margin: 5px 0;
+  padding: 0;
+  font-family: "Reddit Mono";
+}
+
+h1 {
+  color: var(--titulos);
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+span {
+  /* color: var(--destacado); */
+  font-weight: bold;
+}
+
+/* Menu Superior */
+
+.navbar {
+  display: flex;
+  background-color: var(--fondo-nav);
+  align-items: center;
+  flex-direction: column;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.navbar h1,
+a {
+  color: white;
+}
+
+.logo {
+  margin-left: 30px;
+}
+
+.nav-item {
+  padding: 10px;
+}
+
+/* Intro y Aficiones */
+
+.main {
+  margin: 30px;
+  display: grid;
+  gap: 10px;
+  color: var(--negro);
+}
+
+.enlaces li {
+  margin-left: 20px;
+}
+
+.enlaces a {
+  color: var(--parrafos);
+}
+
+.enlaces a:hover {
+  color: black;
+}
+
+/* Fotos */
+
+.imagenes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fotos a{
+    color: black;
+    text-decoration: underline;
+}
+
+/* Redes */
+
+.iconos{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.iconos a{
+  color: black;
+}
+
+.iconos a:hover{
+  text-decoration: none;
+  color: blue;
+}
+
+.icono{
+  display: flex;
+  align-items: center;
+}
+
+i{
+  font-size: 40px;
+}
+
+/* Footer */
+
+footer{
+  background-color: var(--fondo-nav);
+  display: flex;
+  flex-direction: column;
+}
+
+footer h1{
+  margin: 30px;
+  color:  white;
+}
+
+.formulario-contacto{
+  display: grid;
+  grid-template-columns: 300px 100px 300px;
+  grid-template-rows: repeat(3,1fr);
+  margin: 0 auto;
+  color: white;
+  padding: 20px;
+}
+
+.nombre{
+  grid-area: 1/2/2/4;
+  width: 80%;
+  margin-left: auto;
+}
+
+.label-email{
+  grid-area: 2/1/3/2;
+}
+
+.email{
+  grid-area: 2/2/3/4;
+  width: 80%;
+  margin-left: auto;
+}
+
+.formulario-enviar{
+  grid-area: 3/2/4/3;
+}
+
+
+/* Media querys */
+
+@media screen and (min-width: 776px) {
+  .navbar {
+    flex-direction: row;
+  }
+
+  .nav {
+    margin-left: auto;
+    margin-right: 10px;
+  }
+
+  .imagenes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+
+}
+
+@media screen and (max-width:628px) {
+  .nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
